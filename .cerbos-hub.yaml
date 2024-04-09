@@ -1,8 +1,8 @@
 apiVersion: api.cerbos.cloud/v1
 labels:
-  latest: 
-    branch: main 
-  v2:
-    tag: v2 
-  hotfix:
+  latest:         # 'latest' label pointing to the HEAD of the main branch
+    branch: main
+  v2.0:           # 'v2.0' label pointing to the commit tagged 'v2.0'
+    tag: v2.0
+  specificCommit: 
     commitHash: 1748e1be6d4a247dcbf975e3bf5f53a034f9c1c6
