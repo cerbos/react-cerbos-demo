@@ -5,7 +5,7 @@ import {Route, Routes} from 'react-router-dom';
 import {HomePage, CoursesPage} from './Pages';
 
 const client = new Cerbos(
-	await fetch(
+	fetch(
 		'https://lite.cerbos.cloud/bundle?workspace=P8E4H3Z2BO24&label=f481a2c9c90ee3ae4deae7b7f656d65d1cd608828f5853d21e9ca383d479223a'
 	)
 );

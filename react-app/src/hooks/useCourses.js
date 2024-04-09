@@ -11,14 +11,17 @@ const useCourses = () => {
 	const [isLoading, setLoading] = useState(false);
 
 	useEffect(() => {
+		console.log('Fetching courses...');
 		setLoading(true);
 
 		courseService
 			.getAllCourses()
 			.then(async res => {
+				console.log('Courses retrieved:', res.data);
 				// Filter courses based on authorization
 				const authorizedCourses = await Promise.all(
 					res.data.map(async course => {
+						console.log('Checking authorization for course:', course.id);
 						const check = await cerbos.checkResource({
 							resource: {
 								kind: 'course',
@@ -27,6 +30,13 @@ const useCourses = () => {
 							},
 							actions: ['view', 'update', 'delete'],
 						});
+						console.log(
+							'Authorization check result for course',
+							course.id,
+							':',
+							check
+						);
+
 						return (
 							check.isAllowed('view') && {
 								...course,
@@ -37,21 +47,24 @@ const useCourses = () => {
 					})
 				);
 
-				// console.log(authorizedCourses); HTTP
+				console.log('Authorized courses:', authorizedCourses);
 				// Set the courses state with the filtered courses
 				setCourses(authorizedCourses.filter(Boolean));
-				// setCourses(res.data);
 			})
 			.catch(error => {
+				console.error(
+					'Error during course retrieval or authorization check:',
+					error
+				);
 				setError(error.message);
 			})
 			.finally(() => {
-				setTimeout(() => {
-					setLoading(false);
-				}, 1000);
+				console.log('Course fetching completed.');
+				setLoading(false);
 			});
 	}, [cerbos]);
 
+	console.log('Returning courses:', courses);
 	return {courses, error, isLoading, setCourses, setError};
 };
 
