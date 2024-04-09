@@ -1,7 +1,7 @@
 import {useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 
-import {getAccessToken, removeAccessToken} from '../services/tokenStroge';
+import {getAccessToken, removeAccessToken} from '../services/tokenStorage';
 import useCourses from '../hooks/useCourses';
 
 const CoursesPage = () => {

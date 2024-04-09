@@ -37,7 +37,7 @@ const useCourses = () => {
 					})
 				);
 
-				console.log(authorizedCourses);
+				// console.log(authorizedCourses); HTTP
 				// Set the courses state with the filtered courses
 				setCourses(authorizedCourses.filter(Boolean));
 				// setCourses(res.data);

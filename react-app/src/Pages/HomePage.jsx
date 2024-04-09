@@ -2,7 +2,7 @@ import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {useNavigate} from 'react-router-dom';
 import userService from '../services/userService';
-import {setAccessToken} from '../services/tokenStroge';
+import {setAccessToken} from '../services/tokenStorage';
 
 const HomePage = () => {
 	const [authForm, setAuthForm] = useState(null); // uses the useState hook to manage the state of the authentication form (authForm), and the useForm hook to manage the form data.
