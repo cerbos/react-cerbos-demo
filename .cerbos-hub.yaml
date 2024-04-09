@@ -1,0 +1,8 @@
+apiVersion: api.cerbos.cloud/v1
+labels:
+  latest: 
+    branch: main 
+  v2:
+    tag: v2 
+  hotfix:
+    commitHash: 1748e1be6d4a247dcbf975e3bf5f53a034f9c1c6
