@@ -6,7 +6,7 @@ derivedRoles:
   definitions:
     # If the principal belongs to group `USER` in a request, and the `resource`s
     # `autherId` attribute matches `principal`s `id` then the `principal` is considered
-    # as `AUTHOR` within Cerbos for the policy evaluation.
+    # as `AUTHOR` within Cerbos for the policy evaluation
     - name: AUTHOR
       parentRoles: ["USER"]
       condition:
