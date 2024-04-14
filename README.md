@@ -41,7 +41,7 @@ $ npm install @cerbos/react
 First, create an [HTTP](https://github.com/cerbos/cerbos-sdk-javascript/blob/main/packages/http/README.md) or [embedded](https://github.com/cerbos/cerbos-sdk-javascript/blob/main/packages/embedded/README.md) Cerbos client, and provide it to your application's components using [`CerbosProvider`](https://github.com/cerbos/cerbos-sdk-javascript/blob/main/docs/react.cerbosprovider.md):
 
 ## Code Usage
-We're using the Cerbos client created with the embedded provider and passing it to the CerbosProvider, you can [view it here](../react-app/src/App.jsx)
+We're using the Cerbos client created with the embedded provider and passing it to the CerbosProvider, you can [view it here](react-app/src/App.jsx)
 
 1.  **Clone the repository:**
 
