@@ -4,6 +4,8 @@
   React-based web application that uses Cerbos for smooth authorization.
 </p>
 
+![Cerbos_Demo](cerbos-react-demo-diagram.png)
+
 ## Introduction
 
 This is a React-based web application that provides a platform for users to view and manage courses. The application uses Cerbos for authorization.
