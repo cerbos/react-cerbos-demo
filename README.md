@@ -50,7 +50,7 @@ We're using the Cerbos client created with the embedded provider and passing it 
 	```
 
 2. **Edit the App.jsx**
-	Check [path](react-app/src/App.jsx) and edit '<bundle url> link' from your cerbos Hub account.
+	Check [path](react-app/src/App.jsx) and edit `<bundle URL> link` from your cerbos Hub account.
 
 ![Cerbos Hub Embedded link](cerbos_hub_embedded.png)
 
