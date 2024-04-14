@@ -23,10 +23,25 @@ This is a React-based web application that provides a platform for users to view
 
     Make sure you have the following installed on your machine:
 
-    - [Git](https://git-scm.com/)
+    - [Git 16.13+](https://git-scm.com/)
     - [Node.js](https://nodejs.org/en)
     - [pnpm](https://pnpm.io/)
     - [docker](https://www.docker.com/)
+	- [Cerbos 0.16+](https://cerbos.dev)
+	- [Cerbos Hub](https://hub.cerbos.cloud/)
+
+## Installation
+
+```console
+$ npm install @cerbos/react
+```
+
+## Example usage
+
+First, create an [HTTP](https://github.com/cerbos/cerbos-sdk-javascript/blob/main/packages/http/README.md) or [embedded](https://github.com/cerbos/cerbos-sdk-javascript/blob/main/packages/embedded/README.md) Cerbos client, and provide it to your application's components using [`CerbosProvider`](https://github.com/cerbos/cerbos-sdk-javascript/blob/main/docs/react.cerbosprovider.md):
+
+## Code Usage
+We're using the Cerbos client created with the embedded provider and passing it to the CerbosProvider, you can [view it here](../react-app/src/App.jsx)
 
 1.  **Clone the repository:**
 
@@ -34,14 +49,19 @@ This is a React-based web application that provides a platform for users to view
 	git clone https://github.com/rohitg00/cerbos-react-demo.git
 	```
 
-2.  **Start up the Cerbos PDP instance docker container:**
+2. **Edit the App.jsx**
+	Check [path](/Users/rohitghumare/cerbos-demos/cerbos-with-react-demo/react-app/src/App.jsx) and edit '<bundle url> link' from your cerbos Hub account.
+
+![Cerbos Hub Embedded link](cerbos_hub_embedded.png)
+
+2.  **Start up the Cerbos PDP instance docker container in your terminal:**
 
 	```bash
 	./cerbos/start.sh
 	```
 	(This will be called by the React app to check authorization.)
 
-3.  **Navigate to the project directory:**
+3.  **Navigate to the project directory in your terminal:**
 
 	```bash
 	cd react-app/
@@ -53,7 +73,7 @@ This is a React-based web application that provides a platform for users to view
 	pnpm install
 	```
 
-5. Start the development server
+5. **Start the development server**
 
 	```bash
 	pnpm run dev

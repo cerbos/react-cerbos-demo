@@ -30,12 +30,12 @@ const useCourses = () => {
 							},
 							actions: ['view', 'update', 'delete'],
 						});
-						console.log(
-							'Authorization check result for course',
-							course.id,
-							':',
-							check
-						);
+						// console.log(
+						// 	'Authorization check result for course',
+						// 	course.id,
+						// 	':',
+						// 	check
+						// );
 
 						return (
 							check.isAllowed('view') && {
