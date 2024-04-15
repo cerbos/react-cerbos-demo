@@ -4,7 +4,7 @@
   React-based web application that uses Cerbos for smooth authorization.
 </p>
 
-![Cerbos_Demo](cerbos-react-demo-diagram.png)
+![Cerbos_Demo](cerbos-react-demo-diagrams.png)
 
 ## Introduction
 
@@ -90,4 +90,3 @@ We're using the Cerbos client created with the embedded provider and passing it 
 ## Contributing
 
 Contributions are always welcome! Feel free to open issues or submit PRs.
-
