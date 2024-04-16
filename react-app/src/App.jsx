@@ -37,7 +37,7 @@ const ProtectedCoursesPage = () => {
 	const currentUser = userService.getUserId(getAccessToken());
 
 	return (
-		<CerbosProvider
+		<CerbosProvider //wraping component in CerbosProvider to make Cerbos client available to all child components 
 			client={client}
 			principal={{
 				id: currentUser?.id,

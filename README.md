@@ -56,13 +56,6 @@ We're using the Cerbos client created with the embedded provider and passing it 
 
 ![Cerbos Hub Embedded link](cerbos_hub_embedded.png)
 
-2.  **Start up the Cerbos PDP instance docker container in your terminal:**
-
-	```bash
-	./cerbos/start.sh
-	```
-	(This will be called by the React app to check authorization.)
-
 3.  **Navigate to the project directory in your terminal:**
 
 	```bash
