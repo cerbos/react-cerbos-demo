@@ -1,5 +1,5 @@
-import { useEffect, useState, useMemo, useCallback } from 'react';
-import { useCerbos } from '@cerbos/react';
+import {useEffect, useState, useMemo, useCallback} from 'react';
+import {useCerbos} from '@cerbos/react';
 import courseService from '../services/courseService';
 
 const useCourses = () => {
@@ -17,7 +17,7 @@ const useCourses = () => {
       const res = await courseService.getAllCourses();
 
       const authorizedCourses = await Promise.all(
-        res.data.map(async (course) => {
+        res.data.map(async course => {
           const check = await cerbos.checkResource({
             resource: {
               kind: 'course',
@@ -34,12 +34,15 @@ const useCourses = () => {
               canDelete: check.isAllowed('delete'),
             }
           );
-        })
+        }),
       );
 
       setCourses(authorizedCourses.filter(Boolean));
     } catch (error) {
-      console.error('Error during course retrieval or authorization check:', error);
+      console.error(
+        'Error during course retrieval or authorization check:',
+        error,
+      );
       setError(error.message);
     } finally {
       console.log('Course fetching completed.');
@@ -52,7 +55,7 @@ const useCourses = () => {
   }, [fetchCourses]);
 
   console.log('Returning courses:', courses);
-  return { courses, error, isLoading, setCourses, setError, fetchCourses };
+  return {courses, error, isLoading, setCourses, setError, fetchCourses};
 };
 
 export default useCourses;
