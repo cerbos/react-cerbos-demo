@@ -1,10 +1,10 @@
-import userService from './userService';
+import userService from "./userService";
 
 const courseService = {
   getAllCourses: () => {
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       setTimeout(() => {
-        const localValue = localStorage.getItem('Courses');
+        const localValue = localStorage.getItem("Courses");
 
         resolve({
           success: true,
@@ -14,10 +14,10 @@ const courseService = {
     });
   },
 
-  createCourse: course => {
-    return new Promise(resolve => {
+  createCourse: (course) => {
+    return new Promise((resolve) => {
       setTimeout(() => {
-        const localValue = localStorage.getItem('Courses');
+        const localValue = localStorage.getItem("Courses");
         const courses = localValue ? JSON.parse(localValue) : [];
 
         const author = userService.getUser(course.authorId);
@@ -25,41 +25,41 @@ const courseService = {
 
         const courseId = courses.length + 1;
 
-        const newCourse = {id: courseId.toString(), ...course};
+        const newCourse = { id: courseId.toString(), ...course };
         courses.push(newCourse);
-        localStorage.setItem('Courses', JSON.stringify(courses));
+        localStorage.setItem("Courses", JSON.stringify(courses));
 
-        resolve({success: true, data: newCourse});
+        resolve({ success: true, data: newCourse });
       }, 500); // Simulate delay for API call
     });
   },
 
-  updateCourse: course => {
-    return new Promise(resolve => {
+  updateCourse: (course) => {
+    return new Promise((resolve) => {
       setTimeout(() => {
-        const localValue = localStorage.getItem('Courses');
+        const localValue = localStorage.getItem("Courses");
         const courses = JSON.parse(localValue);
 
-        const updatedCourse = courses.map(c =>
-          c.id === course.id ? {...c, ...course} : c,
+        const updatedCourse = courses.map((c) =>
+          c.id === course.id ? { ...c, ...course } : c,
         );
-        localStorage.setItem('Courses', JSON.stringify(updatedCourse));
+        localStorage.setItem("Courses", JSON.stringify(updatedCourse));
 
-        resolve({success: true});
+        resolve({ success: true });
       }, 500); // Simulate delay for API call
     });
   },
 
-  deleteCourse: id => {
-    return new Promise(resolve => {
+  deleteCourse: (id) => {
+    return new Promise((resolve) => {
       setTimeout(() => {
-        const localValue = localStorage.getItem('Courses');
+        const localValue = localStorage.getItem("Courses");
         const courses = JSON.parse(localValue);
 
-        const result = courses.filter(c => c.id !== id);
-        localStorage.setItem('Courses', JSON.stringify(result));
+        const result = courses.filter((c) => c.id !== id);
+        localStorage.setItem("Courses", JSON.stringify(result));
 
-        resolve({success: true});
+        resolve({ success: true });
       }, 500); // Simulate delay for API call
     });
   },
