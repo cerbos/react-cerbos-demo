@@ -6,13 +6,10 @@
 
 <img src='./assets/cerbos-react-demo-diagrams.png'>
 
-<br><br>
-
 ## Introduction
 
 This is a React-based web application that provides a platform for users to view and manage courses. The application uses Cerbos for authorization.
 
-<br>
 
 ## Tech Stack
 
@@ -23,13 +20,70 @@ This is a React-based web application that provides a platform for users to view
 - [Git](https://git-scm.com/) – versioning
 - [pnpm](https://pnpm.io/) – efficient package manager
 
-<br>
-
 ## Example usage
 
-First, create an [HTTP](https://github.com/cerbos/cerbos-sdk-javascript/blob/main/packages/http/README.md) or [embedded](https://github.com/cerbos/cerbos-sdk-javascript/blob/main/packages/embedded/README.md) Cerbos client, and provide it to your application's components using [`CerbosProvider`](https://github.com/cerbos/cerbos-sdk-javascript/blob/main/docs/react.cerbosprovider.md):
+- First, create an [HTTP](https://github.com/cerbos/cerbos-sdk-javascript/blob/main/packages/http/README.md) or [embedded](https://github.com/cerbos/cerbos-sdk-javascript/blob/main/packages/embedded/README.md) Cerbos client, and provide it to your application's components using [`CerbosProvider`](https://github.com/cerbos/cerbos-sdk-javascript/blob/main/docs/react.cerbosprovider.md): We recommend using Embedded Cerbos client for this particular demo.
 
-We're using the Cerbos client created with the embedded provider and passing it to the CerbosProvider, you can [view it here](src/App.jsx)
+- Hence, We're using the Cerbos client created with the embedded provider and passing it to the CerbosProvider, you can [view it here](src/App.jsx)
+
+## Local Development Setup
+
+0.  **Prerequisites**
+
+    Make sure you have the following installed on your machine:
+
+    - [Git](https://git-scm.com/)
+    - [Node.js](https://nodejs.org/en)
+    - [docker](https://www.docker.com/)
+    - [Cerbos 0.16+](https://cerbos.dev)
+    - [Cerbos Hub](https://hub.cerbos.cloud/)
+
+    If you are going with [embedded](https://github.com/cerbos/cerbos-sdk-javascript/blob/main/packages/embedded/README.md) Cerbos client then we need bundle url
+
+<div align="center">
+	<img src='./assets/cerbos_hub_embedded.png' 	width="700px">
+</div>
+
+1.  **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/rohitg00/cerbos-react-demo.git
+    ```
+
+2.  **Navigate to the project directory in your terminal:**
+
+    ```bash
+    cd cerbose-react-demo
+    ```
+
+3.  **Add Environment Variables:**
+
+   - Copy the bundle URL from the Cerbos Hub and paste it in the `VITE_CERBOS_BUNDLE_URL` variable below.
+   - Create `.env` file in the root folder and copy paste the content of `.env.sample`.
+
+    ```bash
+    cp .env.sample .env
+    ```
+
+    If required, add/replace credentials.
+
+4.  **Install dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+5.  **Start the app**
+
+    ```bash
+    npm run dev
+    ```
+
+6.  **Open your browser:**
+
+    Visit [http://localhost:5173](http://localhost:5173) to explore the courses application.
+
+7.  Use the login credentials provided in the `seed.js` file.
 
 <br>
 
@@ -68,66 +122,6 @@ We're using the Cerbos client created with the embedded provider and passing it 
 
    # then press 'w' to Enable Watch (For Hot Reloading)
    ```
-
-<br>
-
-## Local Development Setup
-
-0.  **Prerequisites**
-
-    Make sure you have the following installed on your machine:
-
-    - [Git](https://git-scm.com/)
-    - [Node.js](https://nodejs.org/en)
-    - [docker](https://www.docker.com/)
-    - [Cerbos 0.16+](https://cerbos.dev)
-    - [Cerbos Hub](https://hub.cerbos.cloud/)
-
-    If you are going with [embedded](https://github.com/cerbos/cerbos-sdk-javascript/blob/main/packages/embedded/README.md) Cerbos client then we need bundle url
-
-<div align="center">
-	<img src='./assets/cerbos_hub_embedded.png' 	width="700px">
-</div>
-
-1.  **Clone the repository:**
-
-    ```bash
-    git clone https://github.com/rohitg00/cerbos-react-demo.git
-    ```
-
-2.  **Navigate to the project directory in your terminal:**
-
-    ```bash
-    cd cerbose-react-demo
-    ```
-
-3.  **Add Environment Variables:**
-
-    Create .env file in the root folder and copy paste the content of .env.sample.
-
-    ```bash
-    cp .env.sample .env
-    ```
-
-    If required, add/replace credentials.
-
-4.  **Install dependencies:**
-
-    ```bash
-    npm install
-    ```
-
-5.  **Start the app**
-
-    ```bash
-    npm run dev
-    ```
-
-6.  **Open your browser:**
-
-    Visit [http://localhost:5173](http://localhost:5173) to explore the courses application.
-
-7.  Use the login credentials provided in the `seed.js` file.
 
 <br>
 
