@@ -58,14 +58,14 @@ This is a React-based web application that provides a platform for users to view
 
 3.  **Add Environment Variables:**
 
-   - Copy the bundle URL from the Cerbos Hub and paste it in the `VITE_CERBOS_BUNDLE_URL` variable below.
    - Create `.env` file in the root folder and copy paste the content of `.env.sample`.
-
-    ```bash
+   - Add `VITE_CERBOS_BUNDLE_URL="<bundle-url>"` variable and replace `<bundle-url>` with the bundle URL from Cerbos Hub.
+   
+   ```bash
     cp .env.sample .env
-    ```
+   ```
 
-    If required, add/replace credentials.
+   If required, add/replace credentials.
 
 4.  **Install dependencies:**
 
