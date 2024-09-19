@@ -47,7 +47,7 @@ This is a React-based web application that provides a platform for users to view
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/rohitg00/cerbos-react-demo.git
+    git clone https://github.com/cerbos/react-cerbos-demo.git
     ```
 
 2.  **Navigate to the project directory in your terminal:**
